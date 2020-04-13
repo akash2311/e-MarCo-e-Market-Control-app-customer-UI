@@ -26,7 +26,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
 
 public class signup extends AppCompatActivity {
 
-    EditText name, email, password, contact;
+    EditText name, email, password, contact, adhar;
     Button register;
     FirebaseAuth mFirebaseAuth;
     @Override
@@ -41,6 +41,7 @@ public class signup extends AppCompatActivity {
         register = findViewById(R.id.regs);
         email= findViewById(R.id.uemail);
         contact= findViewById(R.id.contactno);
+        adhar= findViewById(R.id.aadhar);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +49,7 @@ public class signup extends AppCompatActivity {
                 String pwd = password.getText().toString();
                 String fullName = name.getText().toString();
                 String contactno= contact.getText().toString();
+                String ano= adhar.getText().toString();
                 if(fullName.isEmpty()){
                     name.setError("Please enter the Name");
                     name.requestFocus();
@@ -63,6 +65,10 @@ public class signup extends AppCompatActivity {
                 else if (pwd.isEmpty()){
                     password.setError("Please Enter the Password.");
                     password.requestFocus();
+                }
+                else if (ano.isEmpty()){
+                    adhar.setError("Please enter the Aadhar no.");
+                    adhar.requestFocus();
                 }
                 else {
                     mFirebaseAuth.createUserWithEmailAndPassword(mailid, pwd).addOnCompleteListener(signup.this, new OnCompleteListener<AuthResult>() {

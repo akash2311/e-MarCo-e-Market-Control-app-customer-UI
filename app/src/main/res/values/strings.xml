@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">my application</string>
     <string name="mailidd">Email</string>
-    <string name="passworddd">Password</string>
+    <string name="passwordddd">Password</string>
     <string name="log_in">Log In</string>
     <string name="sign_up">Sign Up</string>
-    <string name="todo">TODO</string>
+    <string name="todoo">TODO</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -28,4 +28,6 @@
     <string name="register">Register</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="email">Email</string>
+    <string name="log_out">Log Out</string>
+    <string name="todo">TODO</string>
 </resources>
